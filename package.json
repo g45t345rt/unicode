@@ -1,0 +1,15 @@
+{
+  "name": "unicode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "jest": "^26.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
