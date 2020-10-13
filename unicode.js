@@ -36,18 +36,8 @@ function encodeUTF8 (str) {
 
     // 1 byte unicode
     if (charCode < 0x0080) {
-      // here we don't have to do any encoding since the unit point is lower than 1 byte
       bytes.push(charCode)
     } else if (charCode < 0x0800) {
-      // the charCode is equivalent to two bytes
-      // first byte lead with 110 and the second one with 10
-      // 11000000 = 194
-      // we right shift 6 bit to get the last 5 bit and store with 110
-
-      // 10000000 = 128
-      // 111111 = 63
-      // we use bitwise AND to limit the value two 6 bit length and store with 10
-
       bytes.push(
         194 | (charCode >> 6),
         128 | (charCode & 63)
